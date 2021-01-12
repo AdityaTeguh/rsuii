@@ -14,9 +14,9 @@ use App\Http\Controllers\AntrianController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/',function(){
-//     return view('home');
-// });
+Route::get('/',function(){
+    return view('layouts.master');
+});
 
 // Route::get('/mahasiswa/{nama}/{umur}/{kota}', function ($nama,$umur,$kota) {
 
@@ -28,6 +28,6 @@ use App\Http\Controllers\AntrianController;
 Route::resource('/home',HomeController::class);
 Route::get('/home/{menu}',[HomeController::class,'menu']);
 
-//antrian
-Route::redirect('/rs_antrian/index','/antrian');
-Route::resource('/antrian',AntrianController::class);
+// //antrian
+// Route::redirect('/rs_antrian/index','/antrian');
+// Route::resource('/antrian',AntrianController::class);
