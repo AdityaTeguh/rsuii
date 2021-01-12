@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AntrianController;
 
 /*
@@ -17,6 +18,8 @@ use App\Http\Controllers\AntrianController;
 Route::get('/',function(){
     return view('layouts.master');
 });
+
+Route::resource('/user',UserController::class);
 
 // Route::get('/mahasiswa/{nama}/{umur}/{kota}', function ($nama,$umur,$kota) {
 
